@@ -1,6 +1,6 @@
 
 public class Main {
-    // Описание задания лежит в классе TaskDescription
+    // Описание задания лежит в классе README.md
 
     public static void main(String[] args) {
      GryffindorStudent harry = GryffindorStudent.generateGryffindorStudent("Гарри Потер");
