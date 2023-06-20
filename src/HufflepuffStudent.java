@@ -84,11 +84,11 @@ public class HufflepuffStudent extends HogwartsStudent {
 
         return new HufflepuffStudent(
                 name,
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100)
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM()
         );
     }
 

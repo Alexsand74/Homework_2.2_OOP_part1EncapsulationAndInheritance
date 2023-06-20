@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class GetRandon {
 
-    static Random setRANDOM() {
-        return new Random();
+    static int setRANDOM() {
+        return new Random().nextInt(100);
     }
 }

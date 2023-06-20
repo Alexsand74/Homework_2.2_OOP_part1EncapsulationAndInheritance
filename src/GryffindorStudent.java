@@ -83,11 +83,11 @@ public class GryffindorStudent extends HogwartsStudent {
 
         return new GryffindorStudent(
                 name,
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100)
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM()
         );
     }
 }

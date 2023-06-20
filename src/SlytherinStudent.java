@@ -109,13 +109,13 @@ public class SlytherinStudent extends HogwartsStudent {
     static SlytherinStudent generateSlytherinStudent(String name) {
         return new SlytherinStudent(
                 name,
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100),
-                GetRandon.setRANDOM().nextInt(100)
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM(),
+                GetRandon.setRANDOM()
         );
     }
 }
