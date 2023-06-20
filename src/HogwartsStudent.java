@@ -14,23 +14,23 @@ public abstract class HogwartsStudent {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    int getMagic() {
+    public int getMagic() {
         return magic;
     }
 
-    void setMagic(int magic) {
+    public void setMagic(int magic) {
         this.magic = magic;
     }
 
-    int getTransgression() {
+    public int getTransgression() {
         return transgression;
     }
 
-    void setTransgression(int transgression) {
+    public void setTransgression(int transgression) {
         this.transgression = transgression;
     }
 
@@ -42,7 +42,6 @@ public abstract class HogwartsStudent {
                 ", transgression=" + transgression +
                 '}';
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -50,21 +49,15 @@ public abstract class HogwartsStudent {
         HogwartsStudent that = (HogwartsStudent) o;
         return magic == that.magic && transgression == that.transgression && Objects.equals(name, that.name);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name, magic, transgression);
     }
-
-    int compareHogwarts (HogwartsStudent hogwartsStudent) {
-        return  (this.magic + this.transgression - hogwartsStudent.magic - hogwartsStudent.transgression);
-    }
-    void compareToPrint(HogwartsStudent student) {
-        int i = compareHogwarts(student);
+    public void compareToPrint(HogwartsStudent student) {
+        int i = (this.magic + this.transgression - student.magic - student.transgression);
         toPrint(i, this.getName(), student.getName());
     }
-
-    void toPrint (int i, String firstName, String secondName){
+    public void toPrint (int i, String firstName, String secondName){
         if (i > 0){
             System.out.printf("\n  Победил студент - %s, над студентом - %s " , firstName, secondName);
         } else if (i < 0) {

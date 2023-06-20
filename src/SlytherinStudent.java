@@ -8,7 +8,7 @@ public class SlytherinStudent extends HogwartsStudent {
     private int thirstForPower;  // жажда власти
 
     SlytherinStudent(String name, int magic, int transgression, int cunning, int determination,
-                            int ambition, int ingenuity, int thirstForPower) {
+                     int ambition, int ingenuity, int thirstForPower) {
         super(name, magic, transgression);
         this.cunning = cunning;
         this.determination = determination;
@@ -17,43 +17,43 @@ public class SlytherinStudent extends HogwartsStudent {
         this.thirstForPower = thirstForPower;
     }
 
-    int getCunning() {
+    public int getCunning() {
         return cunning;
     }
 
-    void setCunning(int cunning) {
+    public void setCunning(int cunning) {
         this.cunning = cunning;
     }
 
-    int getDetermination() {
+    public int getDetermination() {
         return determination;
     }
 
-    void setDetermination(int determination) {
+    public void setDetermination(int determination) {
         this.determination = determination;
     }
 
-    int getAmbition() {
+    public int getAmbition() {
         return ambition;
     }
 
-    void setAmbition(int ambition) {
+    public void setAmbition(int ambition) {
         this.ambition = ambition;
     }
 
-    int getIngenuity() {
+    public int getIngenuity() {
         return ingenuity;
     }
 
-    void setIngenuity(int ingenuity) {
+    public void setIngenuity(int ingenuity) {
         this.ingenuity = ingenuity;
     }
 
-    int getThirstForPower() {
+    public int getThirstForPower() {
         return thirstForPower;
     }
 
-    void setThirstForPower(int thirstForPower) {
+    public void setThirstForPower(int thirstForPower) {
         this.thirstForPower = thirstForPower;
     }
 
@@ -85,27 +85,25 @@ public class SlytherinStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(super.hashCode(), cunning, determination, ambition, ingenuity, thirstForPower);
     }
-    private int compareSlytherin(SlytherinStudent slytherinStudent) {
-        return compareHogwarts(slytherinStudent) + this.cunning + this.determination + this.ambition + this.ingenuity
-                + this.thirstForPower - slytherinStudent.cunning - slytherinStudent.determination
-                - slytherinStudent.ambition - slytherinStudent.ingenuity - slytherinStudent.thirstForPower;
+
+    public void compareToPrint(SlytherinStudent student) {
+        int i = (super.getMagic() + super.getTransgression() - student.getMagic() - student.getTransgression())
+                + this.cunning + this.determination + this.ambition + this.ingenuity + this.thirstForPower
+                - student.cunning - student.determination - student.ambition - student.ingenuity
+                - student.thirstForPower;
+        super.toPrint(i, this.getName(), student.getName());
     }
 
-    void compareToPrint(SlytherinStudent slytherinStudent) {
-        int i = compareSlytherin(slytherinStudent);
-        super.toPrint(i, this.getName(), slytherinStudent.getName());
-    }
-
-    static SlytherinStudent generateSlytherinStudent(String name) {
+    public static SlytherinStudent generateSlytherinStudent(String name) {
         return new SlytherinStudent(
                 name,
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM()
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM()
         );
     }
 }

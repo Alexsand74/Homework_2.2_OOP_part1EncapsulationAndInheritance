@@ -6,8 +6,8 @@ public class RavenclawStudent extends HogwartsStudent {
     private int wit;          // остроумие
     private int creativity;   // креативность
 
-    RavenclawStudent(String name, int magic, int transgression, int cleverness,
-                            int wisdom, int wit, int creativity) {
+    private RavenclawStudent(String name, int magic, int transgression, int cleverness,
+                     int wisdom, int wit, int creativity) {
         super(name, magic, transgression);
         this.cleverness = cleverness;
         this.wisdom = wisdom;
@@ -15,35 +15,35 @@ public class RavenclawStudent extends HogwartsStudent {
         this.creativity = creativity;
     }
 
-    int getCleverness() {
+    public int getCleverness() {
         return cleverness;
     }
 
-    void setCleverness(int cleverness) {
+    public void setCleverness(int cleverness) {
         this.cleverness = cleverness;
     }
 
-    int getWisdom() {
+    public int getWisdom() {
         return wisdom;
     }
 
-    void setWisdom(int wisdom) {
+    public void setWisdom(int wisdom) {
         this.wisdom = wisdom;
     }
 
-    int getWit() {
+    public int getWit() {
         return wit;
     }
 
-    void setWit(int wit) {
+    public void setWit(int wit) {
         this.wit = wit;
     }
 
-    int getCreativity() {
+    public int getCreativity() {
         return creativity;
     }
 
-    void setCreativity(int creativity) {
+    public void setCreativity(int creativity) {
         this.creativity = creativity;
     }
 
@@ -74,25 +74,22 @@ public class RavenclawStudent extends HogwartsStudent {
         return Objects.hash(super.hashCode(), cleverness, wisdom, wit, creativity);
     }
 
-    private int compareRavenclaw(RavenclawStudent ravenclawStudent) {
-        return compareHogwarts(ravenclawStudent) + this.cleverness + this.wisdom + this.wit + this.creativity
-                - ravenclawStudent.creativity - ravenclawStudent.wisdom - this.wit - this.creativity;
-    }
-
-    void compareToPrint(RavenclawStudent ravenclawStudent) {
-        int i = compareRavenclaw(ravenclawStudent);
-        super.toPrint(i, this.getName(), ravenclawStudent.getName());
+    void compareToPrint(RavenclawStudent student) {
+        int i = (super.getMagic() + super.getTransgression() - student.getMagic() - student.getTransgression())
+                + this.cleverness + this.wisdom + this.wit + this.creativity
+                - student.creativity - student.wisdom - this.wit - this.creativity;
+        super.toPrint(i, this.getName(), student.getName());
     }
 
     static RavenclawStudent generateRavenclawStudent(String name) {
         return new RavenclawStudent(
                 name,
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM()
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM()
         );
     }
 }

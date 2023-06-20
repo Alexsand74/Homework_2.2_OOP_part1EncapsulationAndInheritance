@@ -5,34 +5,34 @@ public class GryffindorStudent extends HogwartsStudent {
     private int honor;    // честь
     private int bravery;  // храбрость
 
-    GryffindorStudent(String name, int magic, int transgression, int nobility, int honor, int bravery) {
+    private GryffindorStudent(String name, int magic, int transgression, int nobility, int honor, int bravery) {
         super(name, magic, transgression);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
     }
 
-    int getNobility() {
+    public int getNobility() {
         return nobility;
     }
 
-    void setNobility(int nobility) {
+    public void setNobility(int nobility) {
         this.nobility = nobility;
     }
 
-    int getHonor() {
+    public int getHonor() {
         return honor;
     }
 
-    void setHonor(int honor) {
+    public void setHonor(int honor) {
         this.honor = honor;
     }
 
-    int getBravery() {
+    public int getBravery() {
         return bravery;
     }
 
-    void setBravery(int bravery) {
+    public void setBravery(int bravery) {
         this.bravery = bravery;
     }
 
@@ -60,24 +60,22 @@ public class GryffindorStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(nobility, honor, bravery);
     }
-     private int compareGryffindor(GryffindorStudent gryffindorStudent) {
-        return compareHogwarts(gryffindorStudent) + this.nobility + this.honor + this.bravery
-                - gryffindorStudent.nobility - gryffindorStudent.honor - gryffindorStudent.bravery;
+
+
+    public void compareToPrint(GryffindorStudent student) {
+        int i =(super.getMagic() + super.getTransgression() - student.getMagic() - student.getTransgression())
+        + this.nobility + this.honor + this.bravery - student.nobility - student.honor - student.bravery;
+        super.toPrint(i, this.getName(), student.getName());
     }
 
-    void compareToPrint(GryffindorStudent gryffindorStudent) {
-        int i = compareGryffindor(gryffindorStudent);
-        super.toPrint(i, this.getName(), gryffindorStudent.getName());
-    }
-
-    static GryffindorStudent generateGryffindorStudent(String name) {
+    public static GryffindorStudent generateGryffindorStudent(String name) {
         return new GryffindorStudent(
                 name,
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM()
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM()
         );
     }
 }

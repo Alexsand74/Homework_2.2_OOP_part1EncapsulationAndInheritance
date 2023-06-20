@@ -5,7 +5,7 @@ public class HufflepuffStudent extends HogwartsStudent {
     private int loyalty;    // верность
     private int honesty;    // честность
 
-    HufflepuffStudent(String name, int magic, int transgression, int diligence, int loyalty, int honesty) {
+    private HufflepuffStudent(String name, int magic, int transgression, int diligence, int loyalty, int honesty) {
         super(name, magic, transgression);
         this.diligence = diligence;
         this.loyalty = loyalty;
@@ -61,24 +61,20 @@ public class HufflepuffStudent extends HogwartsStudent {
         return Objects.hash(super.hashCode(), diligence, loyalty, honesty);
     }
 
-     private int compareHufflepuff(HufflepuffStudent hufflepuffStudent) {
-        return compareHogwarts(hufflepuffStudent) + this.diligence + this.honesty + this.loyalty
-                - hufflepuffStudent.loyalty - hufflepuffStudent.honesty - hufflepuffStudent.loyalty;
+    void compareToPrint(HufflepuffStudent student) {
+        int i = (super.getMagic() + super.getTransgression() - student.getMagic() - student.getTransgression())
+        + this.diligence + this.honesty + this.loyalty - student.loyalty - student.honesty - student.loyalty;
+        super.toPrint(i, this.getName(), student.getName());
     }
 
-    void compareToPrint(HufflepuffStudent hufflepuffStudent) {
-        int i = compareHufflepuff(hufflepuffStudent);
-        super.toPrint(i, this.getName(), hufflepuffStudent.getName());
-    }
-
-    static HufflepuffStudent generateHufflepuffStudent(String name) {
+    public static HufflepuffStudent generateHufflepuffStudent(String name) {
         return new HufflepuffStudent(
                 name,
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM(),
-                GetRandon.setIntRANDOM()
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM(),
+                GetRandon.getIntRANDOM()
         );
     }
 
