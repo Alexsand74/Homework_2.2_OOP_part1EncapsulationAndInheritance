@@ -53,6 +53,7 @@ public class Main {
         hermione.compareHogwartsToPrint(graham);
         gregory.compareHogwartsToPrint(zechariah);
         justin.compareHogwartsToPrint(padma);
+        padma.compareHogwartsToPrint(ron);
         System.out.println(" =========================================================");
 
     }

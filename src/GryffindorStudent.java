@@ -60,11 +60,10 @@ public class GryffindorStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(nobility, honor, bravery);
     }
-
+    @Override
     protected int compareHogwarts(HogwartsStudent student) {
         return super.compareHogwarts(student);
     }
-
     void compareHogwartsToPrint(HogwartsStudent student) {
         int i = compareHogwarts(student);
         super.toPrint(i, this.getName(), student.getName());

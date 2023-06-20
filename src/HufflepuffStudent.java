@@ -61,6 +61,7 @@ public class HufflepuffStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(super.hashCode(), diligence, loyalty, honesty);
     }
+    @Override
     protected int compareHogwarts(HogwartsStudent student) {
         return super.compareHogwarts(student);
     }
