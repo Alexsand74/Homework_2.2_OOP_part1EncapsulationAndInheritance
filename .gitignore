@@ -1,6 +1,7 @@
 ### IntelliJ IDEA ###
 /out/
 /.idea/
+/homework_2_1_OOPpart_1_ EncapsulationAndInheritance/homework_2_1_OOPpart_1_ EncapsulationAndInheritance.iml
 !**/src/main/**/out/
 !**/src/test/**/out/
 .iml
