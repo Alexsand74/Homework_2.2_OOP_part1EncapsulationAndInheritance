@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class Main {
     // Описание задания лежит в классе TaskDescription

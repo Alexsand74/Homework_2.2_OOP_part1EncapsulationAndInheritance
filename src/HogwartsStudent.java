@@ -66,11 +66,11 @@ public abstract class HogwartsStudent {
 
     void toPrint (int i, String firstName, String secondName){
         if (i > 0){
-            System.out.printf("\n  Победил студент %s над студентом %s " , firstName, secondName);
+            System.out.printf("\n  Победил студент - %s, над студентом - %s " , firstName, secondName);
         } else if (i < 0) {
-            System.out.printf("\n  Победил студент %s над студентом %s " , secondName, firstName);
+            System.out.printf("\n  Победил студент - %s, над студентом - %s " , secondName, firstName);
         } else {
-            System.out.printf("\n  Ничья между студентами %s и %s " , firstName, secondName);
+            System.out.printf("\n  Ничья между студентами - %s и - %s " , firstName, secondName);
         }
         System.out.println();
     }

@@ -73,11 +73,11 @@ public class GryffindorStudent extends HogwartsStudent {
     static GryffindorStudent generateGryffindorStudent(String name) {
         return new GryffindorStudent(
                 name,
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM()
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM()
         );
     }
 }

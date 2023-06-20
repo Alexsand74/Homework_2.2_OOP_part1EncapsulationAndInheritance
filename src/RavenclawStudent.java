@@ -87,12 +87,12 @@ public class RavenclawStudent extends HogwartsStudent {
     static RavenclawStudent generateRavenclawStudent(String name) {
         return new RavenclawStudent(
                 name,
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM()
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM()
         );
     }
 }

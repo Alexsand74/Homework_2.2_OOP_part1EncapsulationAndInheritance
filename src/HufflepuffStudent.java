@@ -65,6 +65,7 @@ public class HufflepuffStudent extends HogwartsStudent {
         return compareHogwarts(hufflepuffStudent) + this.diligence + this.honesty + this.loyalty
                 - hufflepuffStudent.loyalty - hufflepuffStudent.honesty - hufflepuffStudent.loyalty;
     }
+
     void compareToPrint(HufflepuffStudent hufflepuffStudent) {
         int i = compareHufflepuff(hufflepuffStudent);
         super.toPrint(i, this.getName(), hufflepuffStudent.getName());
@@ -73,11 +74,11 @@ public class HufflepuffStudent extends HogwartsStudent {
     static HufflepuffStudent generateHufflepuffStudent(String name) {
         return new HufflepuffStudent(
                 name,
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM(),
-                GetRandon.setRANDOM()
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM(),
+                GetRandon.setIntRANDOM()
         );
     }
 
