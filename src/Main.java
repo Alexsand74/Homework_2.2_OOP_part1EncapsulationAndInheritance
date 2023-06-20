@@ -36,24 +36,24 @@ public class Main {
         System.out.println(" =========================================================");
 
         System.out.println(" === Сравнение учеников одного факультета между собой ====");
-        harry.compareGryffindorToPrint(hermione);
-        hermione.compareGryffindorToPrint(ron);
+        harry.compareToPrint(hermione);
+        hermione.compareToPrint(ron);
 
-        draco.compareSlytherinToPrint(graham);
-        graham.compareSlytherinToPrint(gregory);
+        draco.compareToPrint(graham);
+        graham.compareToPrint(gregory);
 
-        zechariah.compareHufflepuffToPrint(cedric);
-        cedric.compareHufflepuffToPrint(justin);
+        zechariah.compareToPrint(cedric);
+        cedric.compareToPrint(justin);
 
-        zhou.compareRavenclawToPrint(padma);
-        padma.compareRavenclawToPrint(marcus);
+        zhou.compareToPrint(padma);
+        padma.compareToPrint(marcus);
         System.out.println(" =========================================================");
 
         System.out.println(" === Сравнение учеников разных факультетов между собой ===");
-        hermione.compareHogwartsToPrint(graham);
-        gregory.compareHogwartsToPrint(zechariah);
-        justin.compareHogwartsToPrint(padma);
-        padma.compareHogwartsToPrint(ron);
+        hermione.compareToPrint(graham);
+        gregory.compareToPrint(zechariah);
+        justin.compareToPrint(padma);
+        padma.compareToPrint(ron);
         System.out.println(" =========================================================");
 
     }

@@ -73,27 +73,18 @@ public class RavenclawStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(super.hashCode(), cleverness, wisdom, wit, creativity);
     }
-    @Override
-    protected int compareHogwarts(HogwartsStudent student) {
-        return super.compareHogwarts(student);
-    }
-    void compareHogwartsToPrint(HogwartsStudent student) {
-        int i = compareHogwarts(student);
-        super.toPrint(i, this.getName(), student.getName());
-    }
 
     private int compareRavenclaw(RavenclawStudent ravenclawStudent) {
         return compareHogwarts(ravenclawStudent) + this.cleverness + this.wisdom + this.wit + this.creativity
                 - ravenclawStudent.creativity - ravenclawStudent.wisdom - this.wit - this.creativity;
     }
 
-    void compareRavenclawToPrint(RavenclawStudent ravenclawStudent) {
+    void compareToPrint(RavenclawStudent ravenclawStudent) {
         int i = compareRavenclaw(ravenclawStudent);
         super.toPrint(i, this.getName(), ravenclawStudent.getName());
     }
 
     static RavenclawStudent generateRavenclawStudent(String name) {
-
         return new RavenclawStudent(
                 name,
                 GetRandon.setRANDOM(),

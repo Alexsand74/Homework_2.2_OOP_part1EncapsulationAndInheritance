@@ -60,27 +60,17 @@ public class GryffindorStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(nobility, honor, bravery);
     }
-    @Override
-    protected int compareHogwarts(HogwartsStudent student) {
-        return super.compareHogwarts(student);
-    }
-    void compareHogwartsToPrint(HogwartsStudent student) {
-        int i = compareHogwarts(student);
-        super.toPrint(i, this.getName(), student.getName());
-    }
-
-    private int compareGryffindor(GryffindorStudent gryffindorStudent) {
+     private int compareGryffindor(GryffindorStudent gryffindorStudent) {
         return compareHogwarts(gryffindorStudent) + this.nobility + this.honor + this.bravery
                 - gryffindorStudent.nobility - gryffindorStudent.honor - gryffindorStudent.bravery;
     }
 
-    void compareGryffindorToPrint(GryffindorStudent gryffindorStudent) {
+    void compareToPrint(GryffindorStudent gryffindorStudent) {
         int i = compareGryffindor(gryffindorStudent);
         super.toPrint(i, this.getName(), gryffindorStudent.getName());
     }
 
     static GryffindorStudent generateGryffindorStudent(String name) {
-
         return new GryffindorStudent(
                 name,
                 GetRandon.setRANDOM(),

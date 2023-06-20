@@ -56,32 +56,21 @@ public class HufflepuffStudent extends HogwartsStudent {
         HufflepuffStudent that = (HufflepuffStudent) o;
         return diligence == that.diligence && loyalty == that.loyalty && honesty == that.honesty;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), diligence, loyalty, honesty);
     }
-    @Override
-    protected int compareHogwarts(HogwartsStudent student) {
-        return super.compareHogwarts(student);
-    }
 
-    void compareHogwartsToPrint(HogwartsStudent student) {
-        int i = compareHogwarts(student);
-        super.toPrint(i, this.getName(), student.getName());
-    }
      private int compareHufflepuff(HufflepuffStudent hufflepuffStudent) {
         return compareHogwarts(hufflepuffStudent) + this.diligence + this.honesty + this.loyalty
                 - hufflepuffStudent.loyalty - hufflepuffStudent.honesty - hufflepuffStudent.loyalty;
     }
-
-    void compareHufflepuffToPrint(HufflepuffStudent hufflepuffStudent) {
+    void compareToPrint(HufflepuffStudent hufflepuffStudent) {
         int i = compareHufflepuff(hufflepuffStudent);
         super.toPrint(i, this.getName(), hufflepuffStudent.getName());
     }
 
     static HufflepuffStudent generateHufflepuffStudent(String name) {
-
         return new HufflepuffStudent(
                 name,
                 GetRandon.setRANDOM(),

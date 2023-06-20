@@ -85,23 +85,13 @@ public class SlytherinStudent extends HogwartsStudent {
     public int hashCode() {
         return Objects.hash(super.hashCode(), cunning, determination, ambition, ingenuity, thirstForPower);
     }
-    @Override
-    protected int compareHogwarts(HogwartsStudent student) {
-        return super.compareHogwarts(student);
-    }
-
-    void compareHogwartsToPrint(HogwartsStudent student) {
-        int i = compareHogwarts(student);
-        super.toPrint(i, this.getName(), student.getName());
-    }
-
     private int compareSlytherin(SlytherinStudent slytherinStudent) {
         return compareHogwarts(slytherinStudent) + this.cunning + this.determination + this.ambition + this.ingenuity
                 + this.thirstForPower - slytherinStudent.cunning - slytherinStudent.determination
                 - slytherinStudent.ambition - slytherinStudent.ingenuity - slytherinStudent.thirstForPower;
     }
 
-    void compareSlytherinToPrint(SlytherinStudent slytherinStudent) {
+    void compareToPrint(SlytherinStudent slytherinStudent) {
         int i = compareSlytherin(slytherinStudent);
         super.toPrint(i, this.getName(), slytherinStudent.getName());
     }

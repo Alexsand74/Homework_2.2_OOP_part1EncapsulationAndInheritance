@@ -59,6 +59,10 @@ public abstract class HogwartsStudent {
     int compareHogwarts (HogwartsStudent hogwartsStudent) {
         return  (this.magic + this.transgression - hogwartsStudent.magic - hogwartsStudent.transgression);
     }
+    void compareToPrint(HogwartsStudent student) {
+        int i = compareHogwarts(student);
+        toPrint(i, this.getName(), student.getName());
+    }
 
     void toPrint (int i, String firstName, String secondName){
         if (i > 0){
