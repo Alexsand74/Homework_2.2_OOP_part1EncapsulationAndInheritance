@@ -12,27 +12,27 @@ public class HufflepuffStudent extends HogwartsStudent {
         this.honesty = honesty;
     }
 
-    int getDiligence() {
+    public int getDiligence() {
         return diligence;
     }
 
-    void setDiligence(int diligence) {
+    public void setDiligence(int diligence) {
         this.diligence = diligence;
     }
 
-    int getLoyalty() {
+    public int getLoyalty() {
         return loyalty;
     }
 
-    void setLoyalty(int loyalty) {
+    public void setLoyalty(int loyalty) {
         this.loyalty = loyalty;
     }
 
-    int getHonesty() {
+    public int getHonesty() {
         return honesty;
     }
 
-    void setHonesty(int honesty) {
+    public void setHonesty(int honesty) {
         this.honesty = honesty;
     }
 

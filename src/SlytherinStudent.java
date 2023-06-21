@@ -7,7 +7,7 @@ public class SlytherinStudent extends HogwartsStudent {
     private int ingenuity;       // изобретательность
     private int thirstForPower;  // жажда власти
 
-    SlytherinStudent(String name, int magic, int transgression, int cunning, int determination,
+    private SlytherinStudent(String name, int magic, int transgression, int cunning, int determination,
                      int ambition, int ingenuity, int thirstForPower) {
         super(name, magic, transgression);
         this.cunning = cunning;
