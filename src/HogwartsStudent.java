@@ -4,7 +4,7 @@ public abstract class HogwartsStudent {
     private int magic;             // магия
     private int transgression;     // трансгрессия
 
-    HogwartsStudent(String name, int magic, int transgression) {
+    public HogwartsStudent(String name, int magic, int transgression) {
         this.name = name;
         this.magic = magic;
         this.transgression = transgression;
